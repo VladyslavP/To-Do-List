@@ -1,0 +1,212 @@
+.header-app {
+  font-size: 100%;
+  overflow: hidden;
+}
+.header-app .display {
+  opacity: 0;
+  margin-right: -200px;
+}
+.header-app .visible {
+  display: block;
+}
+.header-app .background-left {
+  background-color: orange;
+}
+.header-app .background-right {
+  background-color: antiquewhite;
+}
+.header-app-title {
+  font-family: "Bell MT";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  color: lightseagreen;
+  background-color: orange;
+}
+.header-app-title--words {
+  text-transform: uppercase;
+  font-size: 8em;
+  margin: 0;
+  padding: 0;
+}
+.header-app-items {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  top: 280px;
+  font-size: 20px;
+  transition: all ease 0.3s;
+}
+.header-app-items .line {
+  width: 100px;
+}
+.header-app-items-title {
+  text-align: center;
+  margin: 0;
+  font-family: "Bell MT";
+  text-transform: uppercase;
+}
+.header-app-items-tasks {
+  margin-left: 15px;
+  margin-right: 50px;
+}
+.header-app-items-tasks li {
+  border-bottom: 1px solid lightseagreen;
+  color: black;
+  font-family: "Bell MT";
+  position: relative;
+  transition: all ease 0.2s;
+  list-style: none;
+  cursor: pointer;
+}
+.header-app-items-tasks li:hover {
+  background-color: orange;
+}
+.header-app-items-tasks li .header-app-items-tasks-date {
+  right: 40%;
+  position: absolute;
+}
+.header-app-items-tasks li .header-app-items-tasks-remove {
+  position: absolute;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+.header-app-tasks {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 0;
+  transition: all ease 0.3s;
+  background-color: lightseagreen;
+  overflow: hidden;
+}
+.header-app-tasks ul li {
+  color: white;
+  font-size: 20px;
+}
+.header-app-tasks ul li .checkbox-done {
+  position: absolute;
+  right: 50px;
+  color: orange;
+}
+.header-app-tasks-add-text {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  left: 10px;
+}
+.header-app-tasks-add-button {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  background-color: orange;
+}
+.header-app-tasks-title {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.header-app .active {
+  width: 30%;
+}
+.header-app .short {
+  width: 40%;
+  left: 30%;
+  right: 30%;
+}
+.header-app-create {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fad76d;
+  width: 70%;
+  transition: all ease 0.3s;
+}
+.header-app-create-text {
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+.header-app-create-text-title {
+  color: lightseagreen;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: "Bell MT";
+  font-size: 20px;
+}
+.header-app-create-text-field {
+  width: 100%;
+}
+.header-app-create-button {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.header-app-create-button-type {
+  background-color: lightseagreen;
+  color: white;
+}
+.header-app-introduction {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+.header-app-introduction-create-button {
+  background-color: lightseagreen;
+  color: white;
+}
+.header-app-introduction-view--button {
+  background-color: orange;
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .header-app-title {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header-app-title {
+    font-size: 7px;
+  }
+}
+.done {
+  text-decoration: line-through;
+  color: white;
+}
+.doneAll {
+  text-decoration: line-through;
+  color: lightgray;
+}

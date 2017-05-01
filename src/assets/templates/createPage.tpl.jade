@@ -1,0 +1,29 @@
+div.row
+
+    div.header-app-create(ng-class="{short: checked}")
+        p.header-app-create-text
+            label(for="text").header-app-create-text-title Enter a theme
+            textarea(cols="30", rows="4", ng-model='title')#text.form-control.header-app-create-text-field
+        p.header-app-create-button
+            button.btn.btn-block.header-app-create-button-type(ng-click="addTitle()") Create a theme
+
+    div.header-app-items(ng-class="{short: checked}" ng-if="tasks.length")
+        p.header-app-items-title Themes of the tasks
+        ol.header-app-items-tasks
+            li(ng-repeat="task in tasks", ng-click="openTask($index)")
+                span {{task.task}}
+                span.header-app-items-tasks-remove(ng-click="removeTitle(task)").glyphicon.glyphicon-remove
+
+    div.header-app-tasks(ng-class="{active: checked}")
+        p.header-app-tasks-title {{tasks[current].task}}
+        hr
+        ul
+            li(ng-repeat="task in tasks[current].text")
+                span(ng-class="{done: task.done}") {{task.text}}
+                    input(type="checkbox" ng-model="task.done" ng-click="changeDone(task.done, $index)").checkbox-done
+        div.header-app-tasks-add(ng-class="{display: !checked}")
+            p.header-app-tasks-add-text
+                textarea(ng-model="text").form-control
+            p.header-app-tasks-add-button
+                button.btn.btn-block(ng-click="addTask()") Add a task
+

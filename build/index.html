@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="toDoApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link href="css/libraries/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/modules/app.module.js"></script>
+    <script src="js/modules/notes.module.js"></script>
+    <script src="js/controllers/configApp.js"></script>
+    <script src="js/controllers/app.controller.js"></script>
+    <script src="js/controllers/notes.controller.js"></script>
+    <script src="js/services/api.service.js"></script>
+  </head>
+  <body>
+    <header ng-controller="appCtrl" class="header-app">
+      <div class="container-fluid">
+        <div class="row background">
+          <div class="col-lg-3 col-md-3 col-sm-12 header-app-title">
+            <p class="header-app-title--words">to</p>
+            <p class="header-app-title--words">do</p>
+            <p class="header-app-title--words">li</p>
+            <p class="header-app-title--words">st</p>
+          </div>
+        </div>
+        <div ng-view></div>
+      </div>
+    </header>
+  </body>
+</html>

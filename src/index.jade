@@ -1,0 +1,28 @@
+doctype
+html(ng-app="toDoApp")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title To Do List
+        link(href="css/libraries/bootstrap/css/bootstrap.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+        script(src="js/angular/angular.min.js")
+        script(src="js/angular/angular-route.min.js")
+        script(src="js/modules/app.module.js")
+        script(src="js/modules/notes.module.js")
+        script(src="js/controllers/configApp.js")
+        script(src="js/controllers/app.controller.js")
+        script(src="js/controllers/notes.controller.js")
+        script(src="js/services/api.service.js")
+    body
+        header(ng-controller="appCtrl").header-app
+            div.container-fluid
+                div.row.background
+                    div.col-lg-3.col-md-3.col-sm-12.header-app-title
+                        p.header-app-title--words to
+                        p.header-app-title--words do
+                        p.header-app-title--words li
+                        p.header-app-title--words st
+                div(ng-view)
+
+

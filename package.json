@@ -1,0 +1,36 @@
+{
+  "name": "vladyslav_posudevskyi",
+  "version": "1.0.0",
+  "description": "ToDoList",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladyslavP/ToDoList.git"
+  },
+  "author": "Vladyslav Posudevskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladyslavP/ToDoList/issues"
+  },
+  "homepage": "https://github.com/VladyslavP/ToDoList#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.3.0",
+    "jade": "^1.11.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
+  }
+}

@@ -1,0 +1,34 @@
+
+<div class="row">
+  <div ng-class="{short: checked}" class="header-app-create">
+    <p class="header-app-create-text">
+      <label for="text" class="header-app-create-text-title">Enter a theme</label>
+      <textarea cols="30" rows="4" ng-model="title" id="text" class="form-control header-app-create-text-field"></textarea>
+    </p>
+    <p class="header-app-create-button">
+      <button ng-click="addTitle()" class="btn btn-block header-app-create-button-type">Create a theme</button>
+    </p>
+  </div>
+  <div ng-class="{short: checked}" ng-if="tasks.length" class="header-app-items">
+    <p class="header-app-items-title">Themes of the tasks</p>
+    <ol class="header-app-items-tasks">
+      <li ng-repeat="task in tasks" ng-click="openTask($index)"><span>{{task.task}}</span><span ng-click="removeTitle(task)" class="header-app-items-tasks-remove glyphicon glyphicon-remove"></span></li>
+    </ol>
+  </div>
+  <div ng-class="{active: checked}" class="header-app-tasks">
+    <p class="header-app-tasks-title">{{tasks[current].task}}</p>
+    <hr/>
+    <ul>
+      <li ng-repeat="task in tasks[current].text"><span ng-class="{done: task.done}">{{task.text}}
+          <input type="checkbox" ng-model="task.done" ng-click="changeDone(task.done, $index)" class="checkbox-done"/></span></li>
+    </ul>
+    <div ng-class="{display: !checked}" class="header-app-tasks-add">
+      <p class="header-app-tasks-add-text">
+        <textarea ng-model="text" class="form-control"></textarea>
+      </p>
+      <p class="header-app-tasks-add-button">
+        <button ng-click="addTask()" class="btn btn-block">Add a task</button>
+      </p>
+    </div>
+  </div>
+</div>
